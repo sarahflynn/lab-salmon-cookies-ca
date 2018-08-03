@@ -60,43 +60,7 @@
 
     generateMacaronsPerHour();
 
-    for(let i = 0; i < stores.length; i++) {
-        stores[i].storeTotals = [];
-        let storeTotal = totally(stores[i].macaronsPerHour);
-        stores[i].storeTotals.push(storeTotal);
-    }
-
     module.stores = stores;
-    
-    let totals = [];
-    for(let i = 0; i < 14; i++) {
-        let total = 0;
-
-        for(let j = 0; j < stores.length; j++) {
-            total += stores[j].macaronsPerHour[i];
-        }
-        totals.push(total);
-    }
-    console.log('totals', totals);
-
-    let grandTotal = totally(totals);
-
-    function totally(totals) {
-        let grandTotal = 0;
-        for(let j = 0; j < 14; j++) {
-            grandTotal += totals[j];
-        } 
-        
-        return grandTotal;
-    }
-    console.log('grandTotal', grandTotal);
-    
-    module.totals = {
-        name: 'Totals',
-        macaronsPerHour: totals,
-        storeTotals: grandTotal
-    };
-    console.log('module.totals', module.totals);
 
     function addMacaronsPerHour(store) {
         customers(store);
