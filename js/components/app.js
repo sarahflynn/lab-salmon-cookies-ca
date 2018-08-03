@@ -4,6 +4,7 @@
     let html = module.html;
     let storesApi = module.storesApi;
     let StoresTable = module.StoresTable;
+    let StoreForm = module.StoreForm;
 
     let template = function() {
         return html`
@@ -23,7 +24,11 @@
             let storesTable = new StoresTable ({
                 stores: stores
             });
+            let storeForm = new StoreForm ({
+                stores: stores
+            });
             console.log(stores);
+            main.appendChild(storeForm.render());
             main.appendChild(storesTable.render());
             return dom;
         }

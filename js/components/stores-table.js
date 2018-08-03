@@ -4,6 +4,7 @@
 
     let html = module.html;
     let StoreRow = module.StoreRow;
+    let Totals = module.Totals;
 
     let template = function() {
         return html`
@@ -34,6 +35,8 @@
         `;
     };
 
+    console.log('table totals', Totals);
+
     class StoresTable {
         constructor(props) {
             this.stores = props.stores;
@@ -45,7 +48,14 @@
             });
             this.table.appendChild(storeRow.render());
         }
-        
+
+        updateTotals(stores) {
+            let totals = new Totals ({
+                stores: stores
+            });
+            this.table.appendChild(totals.render());
+
+        }
 
         render() {
             let stores = this.stores;
@@ -55,6 +65,8 @@
             for(let i = 0; i < stores.length; i++) {
                 this.updateStore(stores[i]);
             }
+            
+            this.updateTotals(stores);
 
             return dom;
         }

@@ -77,6 +77,7 @@
         }
         totals.push(total);
     }
+    console.log('totals', totals);
 
     let grandTotal = totally(totals);
 
@@ -85,15 +86,17 @@
         for(let j = 0; j < 14; j++) {
             grandTotal += totals[j];
         } 
+        
         return grandTotal;
     }
+    console.log('grandTotal', grandTotal);
     
     module.totals = {
         name: 'Totals',
         macaronsPerHour: totals,
         storeTotals: grandTotal
     };
-    console.log(module.totals);
+    console.log('module.totals', module.totals);
 
     function addMacaronsPerHour(store) {
         customers(store);
