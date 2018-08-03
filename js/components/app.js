@@ -8,7 +8,7 @@
     let template = function() {
         return html`
             <header>
-                <h1>Savor Salmon Macarons: Sales Data</h1>
+                <h1 id="sales-title">Savor Salmon Macarons: Sales Data</h1>
             </header>
             <main>
             </main>

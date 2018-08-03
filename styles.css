@@ -1,0 +1,197 @@
+table,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/* 
+body {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: .2px;
+    line-height: 1.3rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 30px 0px;
+    text-shadow: 2px 2px 4px black;
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/macaron6.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+#header-nav { 
+    display: flex;
+    bottom: 100;
+    padding: 30px;
+    width: 100vw;
+    height: 15%;
+    background-color: rgba(255, 255, 255, 0.6);
+    justify-content: center;
+}
+
+
+#logo {
+    height: 120px;
+}
+
+#header-headline { 
+    position: absolute;
+    padding: 20px 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 100vw;
+}
+
+#header-headline h2, p {
+    padding: 0 50px;
+    text-shadow: none;
+}
+
+#header-headline p {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#section1 {
+    background-color: #32363f;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+}
+
+section h2 {
+    color: #f8ac68;
+    margin-top: 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px black;
+    font-size: 24px;
+    text-transform: uppercase;
+    padding: 40px 0 10px;
+}
+
+#section1 p {
+    font-weight: 300;
+}
+
+.text-left p, 
+.text-left h3 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.text-right p, 
+.text-right h3 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.text-right {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 30px;
+}
+
+.text-left {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 30px;
+}
+
+.sub-section h3 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.sub-section {
+    display: flex;
+    height: 200px;
+    align-items: stretch;
+    max-width: 868px; 
+    min-width: 791px;
+    margin: 35px auto;
+}
+
+.thumb-container {
+    display: inline-block;
+}
+
+.thumb {
+    height: 90%;
+    vertical-align: middle;
+    display: inline-block !important;
+}
+
+iframe {
+    float: right;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.totals, th, tfoot {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8ab6881;
+}
+
+table {
+    margin: 30px auto;
+    text-align: center;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+#form {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+
+form {
+    margin: 30px auto;
+    width: 260px;
+}
+
+#sales-title {
+    text-align: center;
+    background-color:#f8ab688a;
+    padding: 30px 0;
+    margin-top: 0;
+}
+
+#location-info {
+    float: left;
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+#sales-page h2 {
+    text-align: center;
+    text-shadow: none;
+}
+
+#form-error {
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+} */
