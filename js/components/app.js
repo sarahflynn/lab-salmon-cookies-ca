@@ -2,11 +2,13 @@
 
 (function(module) {
     let html = module.html;
+    let storesApi = module.storesApi;
+    let StoresTable = module.StoresTable;
 
     let template = function() {
         return html`
             <header>
-                <h1>Hello World!</h1>
+                <h1>Savor Salmon Macarons: Sales Data</h1>
             </header>
             <main>
             </main>
@@ -16,11 +18,18 @@
     class App {
         render() {
             let dom = template();
+            let main = dom.querySelector('main');
+            let stores = storesApi.load();
+            let storesTable = new StoresTable ({
+                stores: stores
+            });
+            console.log(stores);
+            main.appendChild(storesTable.render());
             return dom;
-            // let main = dom.querySelector('main');
-            // main.appendChild(template);
         }
     }
+
+    
 
     module.App = App;
 
