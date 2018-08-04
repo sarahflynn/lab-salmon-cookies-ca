@@ -4,7 +4,7 @@
     
     let html = module.html;
 
-    let template = function(store) {
+    let template = function(store, storeTotal) {
         return html`
 
             <tbody id="table-body">
@@ -24,22 +24,22 @@
                     <td>${store.macaronsPerHour[11]}</td>
                     <td>${store.macaronsPerHour[12]}</td>
                     <td>${store.macaronsPerHour[13]}</td>
-                    <td class="totals">${store.storeTotals}</td>
+                    <td class="totals">${storeTotal}</td>
                 </tr>
             </tbody>
 
         `;
     };
 
-    
-
     class StoreRow {
         constructor(props) {
             this.store = props.store;
+            let perHour = props.store.macaronsPerHour;
+            this.storeTotals = perHour.reduce((a, b) => a + b);
         }
 
         render() {
-            let dom = template(this.store);
+            let dom = template(this.store, this.storeTotals);
             return dom;
         }
     }

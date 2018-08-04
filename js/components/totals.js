@@ -10,20 +10,20 @@
             <tfoot id="foot">
                 <tr>
                     <td>Totals</td>
-                    <td>${totals.storeTotals[0]}</td>
-                    <td>${totals.storeTotals[1]}</td>
-                    <td>${totals.storeTotals[2]}</td>
-                    <td>${totals.storeTotals[3]}</td>
-                    <td>${totals.storeTotals[4]}</td>
-                    <td>${totals.storeTotals[5]}</td>
-                    <td>${totals.storeTotals[6]}</td>
-                    <td>${totals.storeTotals[7]}</td>
-                    <td>${totals.storeTotals[8]}</td>
-                    <td>${totals.storeTotals[9]}</td>
-                    <td>${totals.storeTotals[10]}</td>
-                    <td>${totals.storeTotals[11]}</td>
-                    <td>${totals.storeTotals[12]}</td>
-                    <td>${totals.storeTotals[13]}</td>
+                    <td>${totals.hourTotals[0]}</td>
+                    <td>${totals.hourTotals[1]}</td>
+                    <td>${totals.hourTotals[2]}</td>
+                    <td>${totals.hourTotals[3]}</td>
+                    <td>${totals.hourTotals[4]}</td>
+                    <td>${totals.hourTotals[5]}</td>
+                    <td>${totals.hourTotals[6]}</td>
+                    <td>${totals.hourTotals[7]}</td>
+                    <td>${totals.hourTotals[8]}</td>
+                    <td>${totals.hourTotals[9]}</td>
+                    <td>${totals.hourTotals[10]}</td>
+                    <td>${totals.hourTotals[11]}</td>
+                    <td>${totals.hourTotals[12]}</td>
+                    <td>${totals.hourTotals[13]}</td>
                     <td class="grand-total">${totals.grandTotal}</td>
                 </tr>
             </tfoot>
@@ -32,40 +32,36 @@
 
     function getTotals(stores) {
         
-        let storeTotals = [];
+        let hourTotals = [];
         for(let i = 0; i < 14; i++) {
             let total = 0;
     
             for(let j = 0; j < stores.length; j++) {
                 total += stores[j].macaronsPerHour[i];
             }
-            storeTotals.push(total);
+            hourTotals.push(total);
         }
-        console.log('store totals', storeTotals);
+        console.log('hour totals', hourTotals);
     
-        let grandTotal = calcTotal(storeTotals);
+        let grandTotal = calcTotal(hourTotals);
     
-        function calcTotal(storeTotals) {
+        function calcTotal(hourTotals) {
             let grandTotal = 0;
             for(let j = 0; j < 14; j++) {
-                grandTotal += storeTotals[j];
+                grandTotal += hourTotals[j];
             } 
             return grandTotal;
         }
         console.log('grandTotal', grandTotal);
 
         let allTotals = {
-            storeTotals: storeTotals,
+            hourTotals: hourTotals,
             grandTotal: grandTotal
         };
 
         return allTotals;
 
-        // for(let i = 0; i < stores.length; i++) {
-        //     stores[i].storeTotals = [];
-        //     let storeTotal = calcTotal(stores[i].macaronsPerHour);
-        //     stores[i].storeTotals.push(storeTotal);
-        // }
+
 
      
     }
