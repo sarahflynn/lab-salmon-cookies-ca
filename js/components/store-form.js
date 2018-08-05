@@ -1,3 +1,4 @@
+/* global createHourlyInfo */
 'use strict';
 
 (function(module){
@@ -59,6 +60,8 @@
                     max: elements.max.value,
                     avg: elements.avg.value
                 };
+
+                store = createHourlyInfo(store);
                 
                 console.log('storeObject', store);
 
