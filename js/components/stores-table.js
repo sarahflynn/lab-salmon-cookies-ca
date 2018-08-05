@@ -40,6 +40,23 @@
     class StoresTable {
         constructor(props) {
             this.stores = props.stores;
+            this.lastStores = this.stores.slice();
+        }
+        
+        update(props) {
+            let stores = [props.stores];
+            let lastStores = this.lastStores;
+
+            for(let i = 0; i < stores.length; i++) {
+                
+                let store = stores[i];
+                console.log('stores.length', stores.length, i);
+                if(lastStores.includes(store)) continue;
+
+                this.updateStore(store);
+            }
+
+            this.lastStores = stores.slice();
         }
 
         updateStore(store) {

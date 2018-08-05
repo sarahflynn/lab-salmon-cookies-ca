@@ -25,7 +25,12 @@
                 stores: stores
             });
             let storeForm = new StoreForm ({
-                stores: stores
+                onAdd: function(stores) {
+                    storesApi.add(stores);
+                    storesTable.update({
+                        stores: stores
+                    });
+                }
             });
             console.log(stores);
             main.appendChild(storeForm.render());

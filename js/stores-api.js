@@ -81,8 +81,13 @@
     let storesApi = {
         load: function() {
             return stores;
+        },
+        add: function(store) {
+            stores.push(store);
         }
     };
+
+    console.log('stores api: stores', stores);
 
     module.storesApi = storesApi;
 

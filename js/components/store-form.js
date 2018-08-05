@@ -63,16 +63,12 @@
                 
                 console.log('storeObject', store);
 
-                // try {
-                //     error.textContent = '';
-                //     onStoreAdded(store);
-                //     form.reset();
-                //     document.activeElement.blur();
-                // }
-                // catch (err) {
-                //     error.textContent = err.message;
-                //     console.error(err);
-                // }
+                try {
+                    this.onAdd(store);
+                }
+                catch(err) {
+                    console.error(err.message);
+                }
 
             });
 
