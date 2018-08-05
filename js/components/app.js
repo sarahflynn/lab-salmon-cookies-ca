@@ -32,7 +32,6 @@
                     });
                 }
             });
-            console.log(stores);
             main.appendChild(storeForm.render());
             main.appendChild(storesTable.render());
             return dom;

@@ -35,8 +35,6 @@
         `;
     };
 
-    console.log('table totals', Totals);
-
     class StoresTable {
         constructor(props) {
             this.stores = props.stores;
@@ -50,7 +48,6 @@
             for(let i = 0; i < stores.length; i++) {
                 
                 let store = stores[i];
-                console.log('stores.length', stores.length, i);
                 if(lastStores.includes(store)) continue;
 
                 this.updateStore(store);
@@ -89,4 +86,5 @@
         }
     }
     module.StoresTable = StoresTable;
+    
 })(window.module = window.module || {});
