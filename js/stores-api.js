@@ -28,55 +28,13 @@
         max: '16',
         avg: '4.6',  
     }];
-
-    function customers(store){
-        store.customers = [];
-        for(let j = 0; j < 14; j++) {
-            let min = Math.ceil(parseInt(store.min));
-            let max = Math.floor(parseInt(store.max));
-            let customersThisHour = Math.floor(Math.random() * (max - min)) + min;
-            store.customers.push(customersThisHour);
-            
-        }
-    }
-
-    function macarons(store){
-        store.macaronsPerHour = [];
-        for(let j = 0; j < 14; j++) {
-            let macaronsThisHour = Math.ceil((parseFloat(store.customers[j])) * (parseFloat(store.avg)));
-            store.macaronsPerHour.push(macaronsThisHour);
-        }
-    }
-
-    function generateMacaronsPerHour() {
-        for(let i = 0; i < stores.length; i++) {
-            customers(stores[i]);
-        }
-
-        for(let i = 0; i < stores.length; i++) {
-            macarons(stores[i]);
-        }
-    }
-
-    generateMacaronsPerHour();
-
-    module.stores = stores;
-
-    function addMacaronsPerHour(store) {
-        customers(store);
-        macarons(store);
-    }
     
-    function addStore(store) {
-        addMacaronsPerHour(store);
-        console.log('add store working');
-        stores.push(store);
-        console.log('add store push', stores);
+    for(let i = 0; i < stores.length; i++) {
+        stores[i] = createHourlyInfo(stores[i]);
+        console.log('stores[i]', stores[i]);
     }
 
-    module.addStore = addStore;
-    console.log('module.stores', module.stores);
-
+    console.log('stores in api', stores);
 
     let storesApi = {
         load: function() {
@@ -92,3 +50,20 @@
     module.storesApi = storesApi;
 
 })(window.module = window.module || {});
+
+function getRandomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function createHourlyInfo(store){
+    let customers = 0;
+    let macaronsPerHour = 0;
+    store['macaronsPerHour'] = [];
+    for(let i = 0; i < 14; i++){
+        customers = getRandomInteger(parseInt(store.min), parseInt(store.max));
+        console.log('customers', customers);
+        macaronsPerHour = customers * parseFloat(store.avg);
+        store['macaronsPerHour'].push(Math.ceil(macaronsPerHour));
+    }
+    return store;
+} 

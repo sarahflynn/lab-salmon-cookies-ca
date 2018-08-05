@@ -31,6 +31,8 @@
         `;
     };
 
+
+
     class StoreRow {
         constructor(props) {
             this.store = props.store;
