@@ -55,7 +55,6 @@
 
                 this.updateStore(store);
 
-                // let allStores = this.lastStores.push(store);
                 this.updateTotals(this.stores);
             }
 
@@ -73,8 +72,12 @@
             let totals = new Totals ({
                 stores: stores
             });
-            this.table.appendChild(totals.render());
 
+            if(this.table.querySelector('tfoot') !== null) {
+                this.table.querySelector('tfoot').children[0].remove();
+            }
+
+            this.table.appendChild(totals.render());
         }
 
         render() {
@@ -85,7 +88,7 @@
             for(let i = 0; i < stores.length; i++) {
                 this.updateStore(stores[i]);
             }
-            
+
             this.updateTotals(stores);
 
             return dom;
