@@ -26,7 +26,7 @@
                 </p>
                 <p>
                     <label>Average macarons per sale <br />
-                        <input type="number" name="avg">
+                        <input type="number" name="avg" step="any">
                     </label>
                 </p>
                 <p>
