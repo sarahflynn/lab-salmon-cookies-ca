@@ -6,8 +6,6 @@
 
     let template = function(store, storeTotal) {
         return html`
-
-            <tbody id="table-body">
                 <tr>
                     <td>${store.name}</td>
                     <td>${store.macaronsPerHour[0]}</td>
@@ -26,7 +24,6 @@
                     <td>${store.macaronsPerHour[13]}</td>
                     <td class="totals">${storeTotal}</td>
                 </tr>
-            </tbody>
 
         `;
     };

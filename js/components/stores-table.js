@@ -32,6 +32,7 @@
                     </thead>
                 </table>
             </section>
+            <tbody id="table-body">
         `;
     };
 
@@ -74,7 +75,8 @@
             });
 
             if(this.table.querySelector('tfoot') !== null) {
-                this.table.querySelector('tfoot').children[0].remove();
+                console.log(this.table.querySelector('tfoot'));
+                this.table.querySelector('tfoot').remove();
             }
 
             this.table.appendChild(totals.render());
