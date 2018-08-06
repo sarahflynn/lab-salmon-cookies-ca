@@ -56,7 +56,7 @@
                 this.updateStore(store);
 
                 // let allStores = this.lastStores.push(store);
-                this.updateTotals(lastStores.concat(store));
+                this.updateTotals(this.stores);
             }
 
             this.lastStores = stores.slice();
