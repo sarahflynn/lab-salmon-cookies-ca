@@ -54,6 +54,7 @@
                 if(lastStores.includes(store)) continue;
 
                 this.updateStore(store);
+                this.updateTotals(store);
             }
 
             this.lastStores = stores.slice();
