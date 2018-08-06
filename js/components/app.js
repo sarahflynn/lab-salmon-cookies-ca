@@ -1,6 +1,7 @@
 'use strict';
 
 (function(module) {
+    
     let html = module.html;
     let storesApi = module.storesApi;
     let StoresTable = module.StoresTable;
@@ -32,14 +33,12 @@
                     });
                 }
             });
-            console.log(stores);
+        
             main.appendChild(storeForm.render());
             main.appendChild(storesTable.render());
             return dom;
         }
     }
-
-    
 
     module.App = App;
 

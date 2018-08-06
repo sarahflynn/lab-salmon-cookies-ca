@@ -36,8 +36,6 @@
         `;
     };
 
-    console.log('table totals', Totals);
-
     class StoresTable {
         constructor(props) {
             this.stores = props.stores;
@@ -51,7 +49,6 @@
             for(let i = 0; i < stores.length; i++) {
                 
                 let store = stores[i];
-                console.log('store.length', stores.length, i);
                 if(lastStores.includes(store)) continue;
 
                 this.updateStore(store);
@@ -75,7 +72,6 @@
             });
 
             if(this.table.querySelector('tfoot') !== null) {
-                console.log(this.table.querySelector('tfoot'));
                 this.table.querySelector('tfoot').remove();
             }
 
@@ -96,5 +92,7 @@
             return dom;
         }
     }
+
     module.StoresTable = StoresTable;
+    
 })(window.module = window.module || {});

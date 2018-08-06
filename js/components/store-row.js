@@ -7,7 +7,7 @@
     let template = function(store, storeTotal) {
         return html`
                 <tr>
-                    <td>${store.name}</td>
+                    <td class="store-name">${store.name}</td>
                     <td>${store.macaronsPerHour[0]}</td>
                     <td>${store.macaronsPerHour[1]}</td>
                     <td>${store.macaronsPerHour[2]}</td>
@@ -22,13 +22,11 @@
                     <td>${store.macaronsPerHour[11]}</td>
                     <td>${store.macaronsPerHour[12]}</td>
                     <td>${store.macaronsPerHour[13]}</td>
-                    <td class="totals">${storeTotal}</td>
+                    <td class="store-totals">${storeTotal}</td>
                 </tr>
 
         `;
     };
-
-
 
     class StoreRow {
         constructor(props) {

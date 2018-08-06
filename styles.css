@@ -20,7 +20,7 @@ td {
     border-collapse: collapse;
 }
 
-.totals, th, tfoot {
+th, tfoot {
     font-family: 'Montserrat', sans-serif;
     background-color: #f8ab6881;
 }
@@ -35,19 +35,23 @@ th {
     padding: 5px;
 }
 
-#form {
-    font-family: 'Montserrat', sans-serif;
-    color: black;
-}
-
 form {
     margin: 30px auto;
     width: 260px;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background-color: #f8ab683f;
+    padding: 15px 40px;
+}
+
+.store-name,
+.store-totals {
+    font-weight: bold;
+    background-color: #f8ab683f;
 }
 
 #sales-title {
-    text-align: center;
-    background-color:#f8ab688a;
-    padding: 30px 0;
-    margin-top: 0;
+    background-color: #f8ab6881;
+    margin: 0;
+    padding-bottom: 30px;
 }

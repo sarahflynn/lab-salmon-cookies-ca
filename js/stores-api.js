@@ -31,10 +31,7 @@
     
     for(let i = 0; i < stores.length; i++) {
         stores[i] = createHourlyInfo(stores[i]);
-        console.log('stores[i]', stores[i]);
     }
-
-    console.log('stores in api', stores);
 
     let storesApi = {
         load: function() {
@@ -44,8 +41,6 @@
             stores.push(store);
         }
     };
-
-    console.log('stores api: stores', stores);
 
     module.storesApi = storesApi;
 
@@ -61,7 +56,6 @@ function createHourlyInfo(store){
     store['macaronsPerHour'] = [];
     for(let i = 0; i < 14; i++){
         customers = getRandomInteger(parseInt(store.min), parseInt(store.max));
-        console.log('customers', customers);
         macaronsPerHour = customers * parseFloat(store.avg);
         store['macaronsPerHour'].push(Math.ceil(macaronsPerHour));
     }

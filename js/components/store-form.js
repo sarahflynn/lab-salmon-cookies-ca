@@ -2,6 +2,7 @@
 'use strict';
 
 (function(module){
+    
     let html = module.html;
     
     let template = function() {
@@ -50,8 +51,6 @@
                 
                 event.preventDefault();
 
-                console.log('submit listener working');
-
                 let elements = form.elements;
 
                 let store = {
@@ -62,8 +61,6 @@
                 };
 
                 store = createHourlyInfo(store);
-                
-                console.log('storeObject', store);
 
                 try {
                     this.onAdd(store);

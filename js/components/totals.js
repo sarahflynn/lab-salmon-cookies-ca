@@ -4,7 +4,6 @@
 
     let html = module.html;
 
-
     let template = function(totals) {
         return html`
             <tfoot id="foot">
@@ -41,7 +40,6 @@
             }
             hourTotals.push(total);
         }
-        console.log('hour totals', hourTotals);
     
         let grandTotal = calcTotal(hourTotals);
     
@@ -52,7 +50,6 @@
             } 
             return grandTotal;
         }
-        console.log('grandTotal', grandTotal);
 
         let allTotals = {
             hourTotals: hourTotals,
@@ -60,16 +57,12 @@
         };
 
         return allTotals;
-
-
-
      
     }
 
     class Totals {
         constructor(props) {
             this.totals = getTotals(props.stores);
-            console.log('this.totals', this.totals);
         }
 
         render() {
@@ -79,7 +72,5 @@
     }
 
     module.Totals = Totals;
-
-    console.log('totals totals', Totals);
 
 })(window.module = window.module || {});
